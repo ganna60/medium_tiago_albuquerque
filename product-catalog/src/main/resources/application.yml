@@ -1,18 +1,22 @@
 spring:
   application:
     name: PRODUCT-CATALOG-SERVICE
-#  datasource:
-#    url: jdbc:h2:mem:productdb
-#    username: sa
-#    password:
-#  jpa:
-#    show-sql: true
-#  h2:
-#    console:
-#      enabled: true
-#      path: /h2-console
-#      settings.trace: false
-#      settings.web-allow-others: false
+  datasource:
+    url: jdbc:h2:mem:productdb;IFEXISTS=FALSE
+    username: sa
+    password:
+  sql:
+    init:
+      mode: always
+  jpa:
+    show-sql: true
+    open-in-view: false
+    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
 
 server:
   port: 8081

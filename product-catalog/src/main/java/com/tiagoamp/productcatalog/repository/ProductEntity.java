@@ -5,14 +5,15 @@ import lombok.*;
 import javax.persistence.*;
 import java.math.BigDecimal;
 
-@NoArgsConstructor @AllArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 @Data
 @Entity
-@Table(name = "PRODUCTS")
+@Table(name = "product_entity")
 public class ProductEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    //@GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
     private String description;
