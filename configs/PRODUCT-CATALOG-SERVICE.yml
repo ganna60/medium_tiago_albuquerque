@@ -1,8 +1,8 @@
 spring:
-  datasource:
-    url: jdbc:h2:mem:productdb
-    username: sa
-    password:
+#  datasource:
+#    url: jdbc:h2:mem:productdb
+#    username: sa
+#    password:
   sql:
     init:
       mode: always
